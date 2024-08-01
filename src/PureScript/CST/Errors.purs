@@ -29,6 +29,8 @@ data ParseError
   | LexIntOutOfRange String
   | LexNumberOutOfRange String
 
+derive instance eqParseError :: Eq ParseError
+
 printParseError :: ParseError -> String
 printParseError = case _ of
   UnexpectedEof ->
