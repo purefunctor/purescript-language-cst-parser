@@ -39,6 +39,7 @@ data SourceStyle
   | Unicode
 
 derive instance eqSourceStyle :: Eq SourceStyle
+derive instance ordSourceStyle :: Ord SourceStyle
 
 data IntValue
   = SmallInt Int
@@ -46,6 +47,7 @@ data IntValue
   | BigHex String
 
 derive instance eqIntValue :: Eq IntValue
+derive instance ordIntValue :: Ord IntValue
 
 data Token
   = TokLeftParen
@@ -83,6 +85,7 @@ data Token
   | TokLayoutEnd Int
 
 derive instance eqToken :: Eq Token
+derive instance ordToken :: Ord Token
 
 type SourceToken =
   { range :: SourceRange

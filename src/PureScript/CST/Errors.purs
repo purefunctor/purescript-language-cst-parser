@@ -30,6 +30,7 @@ data ParseError
   | LexNumberOutOfRange String
 
 derive instance eqParseError :: Eq ParseError
+derive instance ordParseError :: Ord ParseError
 
 printParseError :: ParseError -> String
 printParseError = case _ of
