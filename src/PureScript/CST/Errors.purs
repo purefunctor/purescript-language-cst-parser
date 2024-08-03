@@ -16,6 +16,8 @@ newtype RecoveredError = RecoveredError
   , tokens :: Array SourceToken
   }
 
+derive newtype instance eqRecoveredError :: Eq RecoveredError
+
 data ParseError
   = UnexpectedEof
   | ExpectedEof Token

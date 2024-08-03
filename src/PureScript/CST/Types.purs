@@ -30,9 +30,13 @@ data Comment l
   | Space Int
   | Line l Int
 
+derive instance eqComment :: Eq l => Eq (Comment l)
+
 data LineFeed
   = LF
   | CRLF
+
+derive instance eqLineFeed :: Eq LineFeed
 
 data SourceStyle
   = ASCII
