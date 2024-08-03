@@ -31,12 +31,14 @@ data Comment l
   | Line l Int
 
 derive instance eqComment :: Eq l => Eq (Comment l)
+derive instance ordComment :: Ord l => Ord (Comment l)
 
 data LineFeed
   = LF
   | CRLF
 
 derive instance eqLineFeed :: Eq LineFeed
+derive instance ordLineFeed :: Ord LineFeed
 
 data SourceStyle
   = ASCII

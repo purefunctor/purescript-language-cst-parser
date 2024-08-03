@@ -17,6 +17,7 @@ newtype RecoveredError = RecoveredError
   }
 
 derive newtype instance eqRecoveredError :: Eq RecoveredError
+derive newtype instance ordRecoveredError :: Ord RecoveredError
 
 data ParseError
   = UnexpectedEof
